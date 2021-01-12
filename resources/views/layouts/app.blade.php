@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
 
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}" media="all">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fresca&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" media="all">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}" media="all">
 
     @livewireStyles
 </head>

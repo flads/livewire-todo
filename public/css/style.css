@@ -1,5 +1,23 @@
+body {
+    color: #FDF739;
+    font-family: 'Fresca', sans-serif;
+    background-color: #FDF16C;
+}
+
 .task-card {
     margin: 100px 0;
     padding: 50px;
     text-align: center;
+    border-radius: 15px;
+    background-color: #222222;
+}
+
+.card-body h1 {
+    font-size: 45px;
+}
+
+.task-list li {
+    font-size: 20px;
+    list-style: none;
+    text-align: left;
 }
