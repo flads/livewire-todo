@@ -8,6 +8,7 @@ class IndexTask extends Component
 {
     public function render()
     {
-        return view('livewire.index-task');
+        return view('livewire.index-task')
+            ->layout('layouts.base');
     }
 }
