@@ -6,11 +6,20 @@ body {
 
 .tasks-card {
     margin-top: 100px;
-    padding: 50px;
+    padding: 25px 0;
     text-align: center;
     border-radius: 15px;
     background-color: #27293D;
     box-shadow: 0 0.5rem 2rem rgba(0,0,0,.05);
+}
+
+.tasks-card .card-body h2 {
+    font-size: 30px;
+}
+
+p.card-separator {
+    border-bottom: 1px solid #FE5F55;
+    border-radius: 50px;
 }
 
 .task-card {
