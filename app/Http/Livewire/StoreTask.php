@@ -8,6 +8,7 @@ class StoreTask extends Component
 {
     public function render()
     {
-        return view('livewire.store-task');
+        return view('livewire.store-task')
+            ->layout('layouts.base');
     }
 }

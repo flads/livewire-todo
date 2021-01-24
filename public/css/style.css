@@ -1,15 +1,25 @@
 body {
-    color: #FDF739;
+    color: white;
     font-family: 'Fresca', sans-serif;
-    background-color: #FDF16C;
+    background-color: #1D1D2E;
 }
 
-.task-card {
-    margin: 100px 0;
+.tasks-card {
+    margin-top: 100px;
     padding: 50px;
     text-align: center;
     border-radius: 15px;
-    background-color: #222222;
+    background-color: #27293D;
+    box-shadow: 0 0.5rem 2rem rgba(0,0,0,.05);
+}
+
+.task-card {
+    margin-top: 100px;
+    padding: 25px 0;
+    text-align: center;
+    border-radius: 15px;
+    background-color: #27293D;
+    box-shadow: 0 0.5rem 2rem rgba(0,0,0,.15);
 }
 
 .card-body h1 {
@@ -20,4 +30,37 @@ body {
     font-size: 20px;
     list-style: none;
     text-align: left;
+}
+
+form.create-task {
+    display: flex;
+    text-align: center;
+}
+
+form.create-task input.form-text {
+    width: 50%;
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0.5rem 2rem rgba(0,0,0,.25);
+}
+
+button.btn-todo {
+    margin-bottom: -2px;
+    padding: 5px 10px;
+    color: white;
+    background: #FE5F55;
+    box-shadow: 0 0.5rem 2rem rgba(0,0,0,.25);
+}
+
+button.btn-todo:hover {
+    background: #FE675D;
+    box-shadow: 0 0.5rem 2rem rgba(0,0,0,.50);
+}
+
+@media (max-width: 1199.98px) {
+    .tasks-card,
+    .task-card {
+        margin-top: 50px;
+    }
 }

@@ -5,7 +5,7 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use App\Models\Task;
 
-class IndexTask extends Component
+class IndexTasks extends Component
 {
     public $description;
 
@@ -18,7 +18,6 @@ class IndexTask extends Component
 
     public function render()
     {
-        return view('livewire.index-task')
-            ->layout('layouts.base');
+        return view('livewire.index-tasks');
     }
 }

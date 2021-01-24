@@ -5,7 +5,7 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use App\Models\Task;
 
-class CreateTask extends Component
+class CompletedTasks extends Component
 {
     public $description;
 
@@ -18,7 +18,6 @@ class CreateTask extends Component
 
     public function render()
     {
-        return view('livewire.create-task')
-            ->layout('layouts.base');
+        return view('livewire.completed-tasks');
     }
 }

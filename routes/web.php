@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Livewire\IndexTask;
+use App\Http\Livewire\CreateTask;
 use App\Http\Livewire\ShowTask;
+use App\Http\Livewire\StoreTask;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,5 +16,6 @@ use App\Http\Livewire\ShowTask;
 |
 */
 
-Route::get('/', IndexTask::class);
-Route::get('/show/{id}', ShowTask::class);
+Route::get('/', CreateTask::class);
+Route::get('/tasks/{id}', ShowTask::class);
+Route::post('/tasks/{id}', StoreTask::class);
