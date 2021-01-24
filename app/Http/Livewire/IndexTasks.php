@@ -7,11 +7,21 @@ use App\Models\Task;
 
 class IndexTasks extends Component
 {
-    public $description;
-
     public $tasks;
 
+    protected $listeners = ['taskAdded'];
+
     public function mount()
+    {
+        $this->getTasks();
+    }
+
+    public function taskAdded()
+    {
+        $this->getTasks();
+    }
+
+    public function getTasks()
     {
         $this->tasks = Task::All();
     }

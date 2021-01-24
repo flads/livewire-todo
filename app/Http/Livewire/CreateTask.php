@@ -9,11 +9,21 @@ class CreateTask extends Component
 {
     public $description;
 
-    public $tasks;
+    protected $rules = [
+        'description' => 'required'
+    ];
 
-    public function mount()
+    public function submit()
     {
-        $this->tasks = Task::All();
+        $this->validate();
+
+        Task::create([
+            'description' => $this->description
+        ]);
+
+        $this->description = '';
+
+        $this->emit('taskAdded');
     }
 
     public function render()
