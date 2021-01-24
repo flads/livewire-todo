@@ -6,7 +6,7 @@
         
         <ul class="task-list">
             @foreach($tasks as $task)
-                <li>{{ $task->description }}</li>
+                <li class="task">{{ $task->description }}</li>
             @endforeach
         </ul>
     </div>

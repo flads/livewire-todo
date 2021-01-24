@@ -14,5 +14,8 @@
         "lodash": "^4.17.19",
         "postcss": "^8.1.14"
     },
-    "dependencies": {}
+    "dependencies": {
+        "alpinejs": "^2.8.0",
+        "laravel-mix": "^6.0.10"
+    }
 }

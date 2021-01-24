@@ -35,10 +35,45 @@ p.card-separator {
     font-size: 45px;
 }
 
-.task-list li {
-    font-size: 20px;
+ul.task-list {
+    padding: 0;
+}
+
+ul.task-list li.task {
+    cursor: pointer;
+    font-size: 18px;
     list-style: none;
     text-align: left;
+    padding: 10px;
+    margin-top: 7px;
+    background: rgb(32,32,50);
+    background: linear-gradient(90deg, rgba(32,32,50,1) 0%, rgba(40,40,62,1) 99.9%);
+    border-radius: 10px;
+}
+
+ul.task-list ul {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: right;
+}
+
+ul.task-list ul li.task-buttons {
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+    list-style: none;
+    display: inline;
+    margin-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    background: rgb(243,101,91);
+    background: linear-gradient(90deg, rgba(243,101,91,1) 0%, rgba(242,95,84,1) 90%);
+    border-radius: 5px;
+}
+
+ul.task-list ul li.task-buttons.btn-delete {
+    padding-right: 5px;
 }
 
 form.create-task {
