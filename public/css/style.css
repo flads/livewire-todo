@@ -1,7 +1,7 @@
 body {
     color: white;
     font-family: 'Fresca', sans-serif;
-    background-color: #1D1D2E;
+    background: #1D1D2E;
 }
 
 .tasks-card {
@@ -23,7 +23,7 @@ p.card-separator {
 }
 
 .task-card {
-    margin-top: 100px;
+    margin-top: 75px;
     padding: 25px 0;
     text-align: center;
     border-radius: 15px;
@@ -32,7 +32,7 @@ p.card-separator {
 }
 
 .card-body h1 {
-    font-size: 45px;
+    font-size: 40px;
 }
 
 ul.task-list {
@@ -46,9 +46,12 @@ ul.task-list li.task {
     text-align: left;
     padding: 10px;
     margin-top: 7px;
-    background: rgb(32,32,50);
-    background: linear-gradient(90deg, rgba(32,32,50,1) 0%, rgba(40,40,62,1) 99.9%);
     border-radius: 10px;
+    background: #1D1D2E;
+}
+
+ul.task-list li.task span.task-number {
+    color: rgb(243,101,91);
 }
 
 ul.task-list ul {
@@ -83,15 +86,13 @@ form.create-task {
 
 form.create-task input.form-text {
     width: 50%;
-    padding: 5px;
     margin-right: 5px;
     border-radius: 5px;
     box-shadow: 0 0.5rem 2rem rgba(0,0,0,.25);
 }
 
 button.btn-todo {
-    margin-bottom: -2px;
-    padding: 5px 10px;
+    padding: 0 10px;
     color: white;
     background: #FE5F55;
     box-shadow: 0 0.5rem 2rem rgba(0,0,0,.25);
@@ -105,6 +106,6 @@ button.btn-todo:hover {
 @media (max-width: 1199.98px) {
     .tasks-card,
     .task-card {
-        margin-top: 50px;
+        margin-top: 25px;
     }
 }
