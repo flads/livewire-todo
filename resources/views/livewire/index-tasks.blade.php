@@ -10,12 +10,8 @@
                     <li @click="open = true" class="task"><span class="task-number">{{++$key}}</span> - {{ $task->description }}</li>
 
                     <ul x-show.transition.in.duration.150ms="open" @click.away="open = false" x-cloak>
-                        <li class="task-buttons btn-completed">
-                            <i class="fas fa-check"></i>
-                        </li>
-                        <li class="task-buttons btn-delete">
-                            <i class="fas fa-trash-alt"></i>
-                        </li>
+                        <li wire:click="taskCompleted({{$task->id}})" @click="open = false" class="task-buttons btn-completed"><i class="fas fa-check"></i></li>
+                        <li wire:click="deleteTask({{$task->id}})" @click="open = false" class="task-buttons btn-delete"><i class="fas fa-trash-alt"></i></li>
                     </ul>
                 </div>
             @endforeach
