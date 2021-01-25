@@ -6,6 +6,7 @@ body {
 
 .tasks-card {
     margin-top: 100px;
+    margin-bottom: 100px;
     padding: 25px 0;
     text-align: center;
     border-radius: 15px;
@@ -23,7 +24,7 @@ p.card-separator {
 }
 
 .task-card {
-    margin-top: 75px;
+    margin-top: 100px;
     padding: 25px 0;
     text-align: center;
     border-radius: 15px;
@@ -75,13 +76,25 @@ ul.task-list ul li.task-buttons {
 form.create-task {
     display: flex;
     text-align: center;
+    margin-top: 30px;
 }
 
 form.create-task input.form-text {
+    outline: none !important;
+    caret-color: #F3655B;
+    font-size: 18px;
+    height: 30px;
     width: 50%;
     margin-right: 5px;
+    margin-bottom: 2px;
     border-radius: 5px;
-    box-shadow: 0 0.5rem 2rem rgba(0,0,0,.25);
+    background: white;
+    border: 1px solid transparent;
+}
+
+form.create-task input.form-text:active,
+form.create-task input.form-text:hover,
+form.create-task input.form-text:focus {
 }
 
 button.btn-todo {
