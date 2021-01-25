@@ -9,7 +9,10 @@ class CompletedTasks extends Component
 {
     public $tasks;
 
-    protected $listeners = ['taskAdded'];
+    protected $listeners = [
+        'taskAdded',
+        'taskCompleted'
+    ];
 
     public function mount()
     {
@@ -21,9 +24,28 @@ class CompletedTasks extends Component
         $this->getTasks();
     }
 
+    public function taskCompleted()
+    {
+        $this->getTasks();
+    }
+
     public function getTasks()
     {
-        $this->tasks = Task::All();
+        $this->tasks = Task::where('completed_at', '!=', null)
+            ->get();
+    }
+
+    public function deleteTask($id)
+    {
+        $this->getTask($id);
+        $this->task->delete();
+
+        $this->mount();
+    }
+
+    public function getTask($id)
+    {
+        $this->task = Task::find($id);
     }
 
     public function render()

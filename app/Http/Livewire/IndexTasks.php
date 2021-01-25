@@ -31,6 +31,8 @@ class IndexTasks extends Component
         $this->task->save();
 
         $this->mount();
+
+        $this->emit('taskCompleted');
     }
 
     public function deleteTask($id)
