@@ -55,6 +55,15 @@ ul.task-list li.task span.task-number {
     color: rgb(243,101,91);
 }
 
+ul.task-list li.task span.task-completed-icon {
+    color: rgb(243,101,91);
+}
+
+ul.task-list li.task span.task-completed-date {
+    font-size: 14px;
+    color: #F3655B;
+}
+
 ul.task-list ul {
     margin-top: 5px;
     margin-bottom: 10px;

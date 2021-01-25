@@ -2,8 +2,9 @@
 
 namespace App\Http\Livewire;
 
-use Livewire\Component;
 use App\Models\Task;
+use Carbon\Carbon;
+use Livewire\Component;
 
 class CompletedTasks extends Component
 {
@@ -31,8 +32,21 @@ class CompletedTasks extends Component
 
     public function getTasks()
     {
-        $this->tasks = Task::where('completed_at', '!=', null)
+        $tasks = Task::where('completed_at', '!=', null)
+            ->orderBy('completed_at')
             ->get();
+
+        foreach ($tasks as $key => $task) {
+            $date = Carbon::parse($task->completed_at);
+            $task->completed_at = $date->isoFormat('DD/MM/YY HH:mm');
+        }
+
+        $this->tasks = $tasks;
+    }
+
+    public function getTask($id)
+    {
+        $this->task = Task::find($id);
     }
 
     public function deleteTask($id)
@@ -41,11 +55,6 @@ class CompletedTasks extends Component
         $this->task->delete();
 
         $this->mount();
-    }
-
-    public function getTask($id)
-    {
-        $this->task = Task::find($id);
     }
 
     public function render()

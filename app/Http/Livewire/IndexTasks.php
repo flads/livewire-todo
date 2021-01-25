@@ -27,7 +27,7 @@ class IndexTasks extends Component
     public function taskCompleted($id)
     {
         $this->getTask($id);
-        $this->task->completed_at = now();
+        $this->task->completed_at = now()->toDateTimeString();
         $this->task->save();
 
         $this->mount();
