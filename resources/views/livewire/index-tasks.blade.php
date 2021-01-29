@@ -11,7 +11,7 @@
 
                     <ul x-show.transition.in.duration.150ms="open" @click.away="open = false" x-cloak>
                         <li wire:click="taskCompleted({{$task->id}})" @click="open = false" class="task-buttons btn-completed"><i class="fas fa-check"></i></li>
-                        <li wire:click="updateTask({{$task->id}})" @click="open = false" class="task-buttons btn-update"><i class="fas fa-edit"></i></li>
+                        <li wire:click="editTask({{$task->id}})" @click="open = false" class="task-buttons btn-update"><i class="fas fa-edit"></i></li>
                         <li wire:click="deleteTask({{$task->id}})" @click="open = false" class="task-buttons btn-delete"><i class="fas fa-trash-alt"></i></li>
                     </ul>
                 </div>

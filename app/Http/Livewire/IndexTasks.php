@@ -35,6 +35,17 @@ class IndexTasks extends Component
         $this->emit('taskCompleted');
     }
 
+    public function editTask($id)
+    {
+        $this->getTask($id);
+        $this->task->editing = true;
+        $this->task->save();
+
+        $this->mount();
+
+        $this->emit('editingTasks');
+    }
+
     public function deleteTask($id)
     {
         $this->getTask($id);
@@ -46,6 +57,7 @@ class IndexTasks extends Component
     public function getTasks()
     {
         $this->tasks = Task::where('completed_at', null)
+            ->where('editing', '!=', true)
             ->get();
     }
 

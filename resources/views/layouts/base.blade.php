@@ -10,6 +10,8 @@
             </div>
             <div class="order-xl-2 order-sm-2 col-xl-6 col-md-12 order-md-1">
                 {{ $slot }}         
+
+                @livewire('edit-tasks')
             </div>
             <div class="col-xl-3 order-xl-3 order-sm-3 col-md-12 order-md-3">
                 @livewire('completed-tasks')
