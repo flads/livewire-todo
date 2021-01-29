@@ -67,6 +67,7 @@ ul.task-list li.task span.task-completed-date {
 ul.task-list ul {
     margin-top: 5px;
     margin-bottom: 10px;
+    padding: 0;
     text-align: right;
 }
 
