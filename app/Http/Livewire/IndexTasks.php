@@ -43,7 +43,7 @@ class IndexTasks extends Component
 
         $this->mount();
 
-        $this->emit('editingTasks');
+        $this->emit('editingTask');
     }
 
     public function deleteTask($id)
