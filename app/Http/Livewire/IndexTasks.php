@@ -12,7 +12,10 @@ class IndexTasks extends Component
 
     public $task;
 
-    protected $listeners = ['taskAdded'];
+    protected $listeners = [
+        'taskAdded',
+        'taskEdited'
+    ];
 
     public function mount()
     {
@@ -20,6 +23,11 @@ class IndexTasks extends Component
     }
 
     public function taskAdded()
+    {
+        $this->getTasks();
+    }
+
+    public function taskEdited()
     {
         $this->getTasks();
     }

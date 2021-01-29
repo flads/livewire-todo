@@ -6,7 +6,7 @@
             <div class="card-body">
                 <form class="edit-task" wire:submit.prevent="submit">
                     <div class="form-group">
-                        <input class="form-text" type="text" value="{{$task['description']}}">
+                        <input wire:model="description" class="form-text" type="text">
                         <button class="btn btn-todo">Update</button>
                     </div>
                 </form>
