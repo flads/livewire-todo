@@ -45,13 +45,18 @@ class IndexTasks extends Component
 
     public function editTask($id)
     {
-        $this->getTask($id);
-        $this->task->editing = true;
-        $this->task->save();
+        $editingTask = Task::where('editing', '=', true)
+            ->first();
 
-        $this->mount();
+        if(!$editingTask) {
+            $this->getTask($id);
+            $this->task->editing = true;
+            $this->task->save();
 
-        $this->emit('editingTask');
+            $this->mount();
+
+            $this->emit('editingTask');
+        }
     }
 
     public function deleteTask($id)

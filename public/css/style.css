@@ -15,12 +15,12 @@ body {
 }
 
 .tasks-card .card-body h2 {
-    font-size: 30px;
+    font-size: 22px;
 }
 
 .task-edit-card h2 {
     padding: 20px 0 0 20px;
-    font-size: 30px;
+    font-size: 22px;
 }
 
 p.card-separator {
@@ -47,7 +47,7 @@ p.card-separator {
 }
 
 .card-body h1 {
-    font-size: 40px;
+    font-size: 36px;
 }
 
 div.task-edit-card div.card-body {

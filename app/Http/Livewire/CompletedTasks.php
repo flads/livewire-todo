@@ -33,7 +33,7 @@ class CompletedTasks extends Component
     public function getTasks()
     {
         $tasks = Task::where('completed_at', '!=', null)
-            ->orderBy('completed_at')
+            ->orderBy('completed_at', 'desc')
             ->get();
 
         foreach ($tasks as $key => $task) {
