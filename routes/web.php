@@ -17,5 +17,3 @@ use App\Http\Livewire\StoreTask;
 */
 
 Route::get('/', CreateTask::class);
-Route::get('/tasks/{id}', ShowTask::class);
-Route::post('/tasks/{id}', StoreTask::class);
