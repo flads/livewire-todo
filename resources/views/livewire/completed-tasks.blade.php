@@ -13,7 +13,8 @@
                     </li>
 
                     <ul x-show.transition.in.duration.150ms="open" @click.away="open = false" x-cloak>
-                        <li wire:click="deleteTask({{$task->id}})" @click="open = false" class="task-buttons btn-delete"><i class="fas fa-trash-alt"></i></li>
+                        <li wire:click="returnTask({{$task->id}})" @click="open = false" class="task-buttons"><i class="fas fa-undo-alt"></i></li>
+                        <li wire:click="deleteTask({{$task->id}})" @click="open = false" class="task-buttons"><i class="fas fa-trash-alt"></i></li>
                     </ul>
                 </div>
             @endforeach

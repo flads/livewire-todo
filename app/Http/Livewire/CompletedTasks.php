@@ -49,6 +49,17 @@ class CompletedTasks extends Component
         $this->task = Task::find($id);
     }
 
+    public function returnTask($id)
+    {
+        $this->getTask($id);
+        $this->task->completed_at = null;
+        $this->task->save();
+
+        $this->mount();
+
+        $this->emit('taskReturned');
+    }
+
     public function deleteTask($id)
     {
         $this->getTask($id);

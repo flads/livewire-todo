@@ -14,7 +14,8 @@ class IndexTasks extends Component
 
     protected $listeners = [
         'taskAdded',
-        'taskEdited'
+        'taskEdited',
+        'taskReturned'
     ];
 
     public function mount()
@@ -28,6 +29,11 @@ class IndexTasks extends Component
     }
 
     public function taskEdited()
+    {
+        $this->getTasks();
+    }
+
+    public function taskReturned()
     {
         $this->getTasks();
     }
