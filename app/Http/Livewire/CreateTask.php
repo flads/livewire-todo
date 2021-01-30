@@ -10,20 +10,25 @@ class CreateTask extends Component
     public $description;
 
     protected $rules = [
-        'description' => 'required'
+        'description' => 'required|max:100|string'
     ];
 
     public function submit()
     {
         $this->validate();
 
-        Task::create([
-            'description' => $this->description
-        ]);
+        $this->createTask();
 
         $this->description = '';
 
         $this->emit('taskAdded');
+    }
+
+    public function createTask()
+    {
+        Task::create([
+            'description' => $this->description
+        ]);
     }
 
     public function render()

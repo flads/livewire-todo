@@ -10,6 +10,10 @@ class EditTask extends Component
     public $task;
     public $description;
 
+    protected $rules = [
+        'description' => 'required|max:100|string'
+    ];
+
     protected $listeners = [
         'editingTask'
     ];
@@ -21,17 +25,26 @@ class EditTask extends Component
 
     public function submit()
     {
-        $this->task->description = $this->description;
-        $this->task->editing = false;
-        $this->task->save();
+        $this->validate();
 
-        $this->getTask();
+        $this->updateTask();
+
+        $this->task = null;
+
         $this->emit('taskEdited');
     }
 
     public function editingTask()
     {
         $this->getTask();
+    }
+
+    public function updateTask()
+    {
+        $this->task->description = $this->description;
+        $this->task->editing = false;
+
+        $this->task->save();
     }
 
     public function getTask()
