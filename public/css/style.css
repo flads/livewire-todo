@@ -4,6 +4,10 @@ body {
     background: #1D1D2E;
 }
 
+div.trial-version-alert {
+    margin-top: 25px;
+}
+
 .tasks-card {
     margin-top: 50px;
     margin-bottom: 100px;

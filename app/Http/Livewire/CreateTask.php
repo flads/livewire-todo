@@ -26,9 +26,13 @@ class CreateTask extends Component
 
     public function createTask()
     {
-        Task::create([
-            'description' => $this->description
-        ]);
+        $count = Task::all()->count();
+
+        if($count < 10) {
+            Task::create([
+                'description' => $this->description
+            ]);
+        }
     }
 
     public function render()

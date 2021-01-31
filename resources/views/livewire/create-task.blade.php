@@ -9,5 +9,8 @@
 
             <button class="btn btn-todo">Submit</button>
         </form>
+        <div class="trial-version-alert">
+            In this trial version you are limited to handling only 10 tasks.
+        </div>
     </div>
 </div>
