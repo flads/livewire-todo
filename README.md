@@ -6,11 +6,11 @@
 
 A simple TODO list app built with Laravel Livewire. The main objective of this project is to provide an example application for those who are starting with Laravel Livewire.
 
-  - Create tasks;
-  - Edit tasks;
-  - Delete tasks;
-  - Complete tasks;
-  - Restore tasks;
+  - Create tasks.
+  - Edit tasks.
+  - Delete tasks.
+  - Complete tasks.
+  - Restore tasks.
 
 > [Demo](https://livewire-todo.flads.me)
 
@@ -18,9 +18,9 @@ A simple TODO list app built with Laravel Livewire. The main objective of this p
 
 Technologies used in this project:
 
-* [Laravel](https://github.com/laravel/laravel) - The Laravel PHP framework
-* [Livewire](https://github.com/livewire/livewire) - Laravel Livewire
-* [Bootstrap](https://github.com/twbs/bootstrap) - Bootstrap
+* [Laravel](https://github.com/laravel/laravel) - The Laravel PHP framework.
+* [Livewire](https://github.com/livewire/livewire) - Laravel Livewire.
+* [Bootstrap](https://github.com/twbs/bootstrap) - Bootstrap.
 
 And of course Livewire TODO itself is open source with a [public repository](https://github.com/flads/livewire-todo) on GitHub.
 
