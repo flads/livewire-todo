@@ -27,11 +27,13 @@ class CreateTask extends Component
     public function createTask()
     {
         $count = Task::all()->count();
-
+        
         if($count < 10) {
             Task::create([
                 'description' => $this->description
             ]);
+        } else {
+            $this->addError('tasksLimit', 'In this trial version you are limited to handling only 10 tasks.');
         }
     }
 

@@ -3,14 +3,16 @@
         <h1>Create Task</h1>
 
         @error('description') <span class="error">- {{ $message }}</span> @enderror
+        @error('tasksLimit')
+        <div class="trial-version-alert">
+            {{ $message }}
+        </div>
+        @enderror
 
         <form class="create-task justify-content-center" wire:submit.prevent="submit">
             <input wire:model="description" class="form-text" type="text" placeholder="Build a Todo App...">
 
             <button class="btn btn-todo">Submit</button>
         </form>
-        <div class="trial-version-alert">
-            In this trial version you are limited to handling only 10 tasks.
-        </div>
     </div>
 </div>
