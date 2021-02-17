@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Jobs\RegenerateTasks as RegenerateTasksJobs;
 use App\Models\Task;
 use Illuminate\Console\Command;
 
@@ -40,12 +41,8 @@ class RegenerateTasks extends Command
     {
         $this->line('Running...');
         $this->newLine(1);
-        
-        $this->call('migrate:fresh', [
-            '--seed' => true,
-        ]);
-
-        $this->newLine(1);
+        //dispatch(new RegenerateTasksJobs)->onConnection('database');
+        dispatch(new RegenerateTasksJobs());
         $this->info('The command was successful!');
     }
 }
