@@ -41,7 +41,6 @@ class RegenerateTasks extends Command
     {
         $this->line('Running...');
         $this->newLine(1);
-        //dispatch(new RegenerateTasksJobs)->onConnection('database');
         dispatch(new RegenerateTasksJobs());
         $this->info('The command was successful!');
     }
