@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         Task::factory()->count(4)->create();
-        Task::factory()->count(3)->create([
+        Task::factory()->count(2)->create([
             'completed_at' => now()
         ]);
     }

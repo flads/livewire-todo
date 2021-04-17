@@ -33,6 +33,7 @@ class RegenerateTasks implements ShouldQueue
     {
         Artisan::call('migrate:fresh', [
             '--seed' => true,
+            '--force' => true,
         ]);
     }
 }
