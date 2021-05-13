@@ -9,7 +9,7 @@
                 <div x-data="{ open: false }">
                     <li @click="open = true" class="task">
                         <span class="task-completed-icon"><i class="fas fa-check"></i></span> - {{ $task->description }}
-                        <span class="task-completed-date">(Concluída em: {{$task->completed_at}}h)</span>
+                        <span class="task-completed-date">(Finished at: {{$task->completed_at}})</span>
                     </li>
 
                     <ul x-show.transition.in.duration.150ms="open" @click.away="open = false" x-cloak>
