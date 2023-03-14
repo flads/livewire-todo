@@ -12,8 +12,6 @@ A simple TODO list app built with Laravel Livewire. The main objective of this p
   - Complete tasks.
   - Restore tasks.
 
-> [Demo](https://livewire-todo.flads.me)
-
 ### Tech
 
 Technologies used in this project:
